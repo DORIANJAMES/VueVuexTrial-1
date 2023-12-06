@@ -10,16 +10,8 @@ import Header from "@/components/Header.vue";
 export default {
   name: 'App',
   components: {Header},
-  methods: {
-    getData() {
-      this.$appAxios.get('/people').then((response) => {
-        this.$store.state.people = response.data
-      })
-    }
-  },
-  created() {
-    this.getData()
-  }
+
+
 }
 </script>
 

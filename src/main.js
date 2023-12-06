@@ -17,8 +17,8 @@ const app = createApp(App)
 
 library.add(faUserSecret)
 
-app.use(store)
 app.use(router)
+app.use(store)
 app.config.globalProperties.$appAxios = appAxios
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.mount('#app')

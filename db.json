@@ -1,34 +1,34 @@
 {
   "people": [
     {
-      "name": "Yusuf",
-      "surname": "NARİN",
-      "age": 22,
-      "id": 1
-    },
-    {
+      "id": 1,
       "name": "Alihan",
       "surname": "AÇIKGÖZ",
-      "age": 32,
-      "id": 2
+      "age": 39
     },
     {
-      "name": "Sami",
-      "surname": "ZİVİN",
-      "age": 32,
-      "id": 3
+      "id": 2,
+      "name": "Yusuf",
+      "surname": "NARİN",
+      "age": 22
     },
     {
+      "id": 3,
       "name": "Merih",
       "surname": "ERDEM",
-      "age": 32,
-      "id": 4
+      "age": 25
     },
     {
+      "id": 4,
       "name": "Ethem",
       "surname": "SUNGUR",
-      "age": 32,
-      "id": 5
+      "age": 30
+    },
+    {
+      "id": 5,
+      "name": "Sami",
+      "surname": "ZİVİN",
+      "age": 35
     }
   ]
 }

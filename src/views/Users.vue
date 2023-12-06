@@ -1,16 +1,24 @@
 <script>
-import TableComp from "@/components/Table.vue";
 
 export default {
   name: "UsersView",
-  components: {TableComp}
+  methods: {
+    getData() {
+      this.$appAxios.get('/people').then((response) => {
+        this.$store.state.people = response.data
+      })
+    }
+  },
+  created() {
+    this.getData()
+  }
 }
 </script>
 
 <template>
-  <TableComp></TableComp>
+  <router-view></router-view>
 </template>
 
-<style scoped>
+<style>
 
 </style>

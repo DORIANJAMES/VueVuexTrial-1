@@ -4,10 +4,18 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 export default {
   name: "TableComp",
   components: {FontAwesomeIcon},
+  props: ['component'],
   methods: {
     delete(e){
-      console.log(e);
+      this.$appAxios.delete(`/people/${e}`)
+      this.$store.getters.getData;
+    },
+    forward(e){
+      this.$router.push(`/users/${e}`)
     }
+  },
+  created() {
+    this.$store.getters.getData;
   }
 }
 </script>
@@ -15,7 +23,7 @@ export default {
 <template>
 <div class="container">
   <div class="d-flex justify-content-end">
-    <router-link to="/new-user" class="btn btn-success"><strong>+</strong></router-link>
+    <router-link to="/users/new-user" class="btn btn-success"><strong>+</strong></router-link>
   </div>
   <table class="table table-striped table-hover">
     <thead>
@@ -28,7 +36,7 @@ export default {
     </tr>
     </thead>
     <tbody>
-    <tr v-for="(person,i) in $store.state.people" :key="i">
+    <tr v-for="(person,i) in $store.state.people" :key="i" @click="forward(person.id)">
       <th scope="row">{{ i+1 }}</th>
       <td>{{ person.name }}</td>
       <td>{{ person.surname }}</td>
